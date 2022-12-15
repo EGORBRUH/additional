@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section  {
+  padding: 50px 0;
+}
+
+
+
+
+
+.green-progress {
+  width: 50%;
+  height: 30px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #0ee2f5;
+
+
+
+  }
+
+.green {
+  margin-bottom: 50px;
+  width: 0%;
+  height: 100%;
+  background-color: greenyellow;
+  animation-name: green-animate;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+
+}
+
+
+@keyframes green-animate {
+  from {
+
+    transform: translateZ(0px);
+
+  }
+  to {
+    width: 90%;
+    transform: translateZ(300px);
+  }
+
+}
+
+.orange-rectangle {
+  width: 100%;
+}
+
+
+.orange {
+  width:30%;
+  height: 50px;
+  background-color: orange;
+}
+
+.orange {
+  transition-property: all;
+  transition-timing-function: linear;
+  animation-iteration-count:infinite;
+  animation-direction: alternate;
+  animation-play-state: paused;
+  animation-name: orange-hover;
+  animation-duration: 3s;
+}
+.orange:hover {
+  animation-play-state: running;
+}
+@keyframes orange-hover {
+  0% {
+    width: 30%;
+  }
+  100% {
+    width: 100%;
+
+  }
+
+}
+.bouncing-ball {
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #3421da;
+}
+
+.ball {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #3421da;
+  border-radius: 50%;
+  animation: ball 2s linear infinite, crush 2s linear infinite;
+
+
+}
+
+
+@keyframes ball {
+  0% {
+    bottom: 100%;
+  }20% {
+    bottom: 0;
+  }40% {
+    bottom: 20%;
+  }60% {
+    bottom: 0;
+  }80% {
+    bottom: 10%;
+  }100% {
+    bottom: 0;
+  }
+
+}
+
+@keyframes crush {
+  0% {
+   left: 10%;
+  }20% {
+   left: 30%;
+  }40% {
+   left: 40%;
+  }60% {
+   left: 50%;
+  }80% {
+   left: 60%;
+  }100% {
+   left: 70%;
+  }
+}
+
